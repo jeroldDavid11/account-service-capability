@@ -1,0 +1,73 @@
+Local Oauth Key Generator 
+ URL --> /oauth/token
+
+Basic Auth :
+    username : admin
+    password : secret-key 
+   
+Body form:
+	grant_type : password
+	username : useremail@gmail.com
+	password : test
+
+************* A Respone containg a Bear token will be Genereted once submitted ******************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+
+
+*********************************** Services ****************************************************
+
+1.) Add a Customer : POST
+    URL --> /api/v1/accounts
+	BODY :
+	{
+		"customerName" : "Test Test",
+		"customerMobile": "0918723112",
+		"address1": "somewhere",
+		"address2": "over therer",
+		"accounType": "S",
+		"customerEmail": "test"
+	}
+
+2.) View a Customer : GET
+    URL --> api/v1/accounts/{id}
+    BODY : N/A
+	
+3.) Add balance to a accont : POST
+    URL --> api/v1/accounts/addbalance/{id}
+	BODY :
+	{
+		"accounType" : "S",
+		"amount": "11100"
+	}
+
+4.) View a balance on a customer : GET
+    URL --> api/v1/accounts/balance
+	BODY :
+	{
+		"accountNumber" : "10003"
+	}
+
+4.) Bulk Creation: POST
+	URL --> api/v1/accounts/bulk
+	BODY :
+	[
+		{
+		"customerName" : "Test",
+		"customerMobile": "0918723112",
+		"address1": "somewhere",
+		"address2": "over therer",
+		"accounType": "S",
+		"customerEmail": "test@gmail.com"
+		},
+		{
+		"customerName" : "Test",
+		"customerMobile": "0918723112",
+		"address1": "Happy",
+		"address2": "Sn carlos",
+		"accounType": "S",
+		"customerEmail": "test@gmail.com"
+	   }
+	]

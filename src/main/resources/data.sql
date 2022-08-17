@@ -1,0 +1,5 @@
+INSERT INTO USERS (ID, USERNAME,PASSWORD) VALUES (
+   1, 'test@gmail.com','$2a$08$fL7u5xcvsZl78su29x1ti.dxI.9rYO8t0q5wk2ROJ.1cdR53bmaVG');
+
+INSERT INTO USERS (ID, USERNAME,PASSWORD) VALUES (
+   2, 'useremail@gmail.com','$2a$10$Rx3DTudN102/PA84USX8XuuEsoS1uAeaw5.NRYtSrEHl875WlJ90u'); 
